@@ -1,9 +1,11 @@
 import requests
 
+# Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
 
 def pokemon_get(name):
     
+    # Gets info about the pokemon 
     url= f"{web}pokemon/{name}"
     response = requests.get(url)
 
