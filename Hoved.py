@@ -2,6 +2,10 @@ import requests
 import random
 import os  
 
+class Pokemon:
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
 
 # Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
@@ -25,10 +29,10 @@ def linje():
 def main():
     ny_pokemon = random.randint(1, 1025)
     ny_pokemon = get_pokemon(ny_pokemon)
-    gammel_pokemon = ny_pokemon
+    gammel_pokemon = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
 
-    print(f"Navn: {gammel_pokemon['name'].title()}")
-    print(f"Vekt: {gammel_pokemon['weight']/10}kg")
+    print(f"Navn: {gammel_pokemon.name}")
+    print(f"Vekt: {gammel_pokemon.weight}kg")
 
     while True:
         ny_pokemon = random.randint(1, 1025)
@@ -36,15 +40,16 @@ def main():
 
         
         linje()
-        # Prints the new pokemon and ask about the old one
-        print(f"Veier {gammel_pokemon['name'].title()} mer en {ny_pokemon['name'].title()}?")
-        print(f"Navn: {ny_pokemon['name'].title()}")
+        ny_pokemon_class = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
+        print(f"Veier {gammel_pokemon.name} mer en {ny_pokemon_class.name}?")
+
+        print(f"Navnet til pokemonen du skal gjette: {ny_pokemon_class.name}")
 
         linje()
         player_input = input("Y or N: ")
 
         # clears the terminal
         os.system("cls")
-        gammel_pokemon = ny_pokemon
+        gammel_pokemon = ny_pokemon_class
 
 main()
