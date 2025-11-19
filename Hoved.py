@@ -41,9 +41,9 @@ def main():
         
         linje()
         ny_pokemon_class = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
-        print(f"Veier {gammel_pokemon.name} mer en {ny_pokemon_class.name}?")
+        print(f"Veier {gammel_pokemon.name} mer en {ny_pokemon_class.name}? ")
 
-        print(f"Navnet til pokemonen du skal gjette: {ny_pokemon_class.name}")
+        print(f"Navn: {ny_pokemon_class.name}")
 
         linje()
         player_input = input("Y or N: ")
