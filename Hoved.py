@@ -23,7 +23,7 @@ def linje():
 def main():
     ny_pokemon = random.randint(1, 1025)
     ny_pokemon = get_pokemon(ny_pokemon)
-    gammel_pokemon = ""
+    gammel_pokemon = ny_pokemon
 
     print(f"Navn: {gammel_pokemon['name'].title()}")
     print(f"Vekt: {gammel_pokemon['weight']/10}kg")
