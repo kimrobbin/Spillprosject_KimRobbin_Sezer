@@ -4,7 +4,7 @@ import random
 # Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
 
-def pokemon_get(name):
+def get_pokemon(name):
     
     # Gets info about the pokemon 
     url= f"{web}pokemon/{name}"
@@ -22,8 +22,8 @@ def linje():
 
 def main():
     ny_pokemon = random.randint(1, 1025)
-    ny_pokemon = pokemon_get(ny_pokemon)
-    gammel_pokemon = ny_pokemon
+    ny_pokemon = get_pokemon(ny_pokemon)
+    gammel_pokemon = ""
 
     print(f"Navn: {gammel_pokemon['name'].title()}")
     print(f"Vekt: {gammel_pokemon['weight']/10}kg")
