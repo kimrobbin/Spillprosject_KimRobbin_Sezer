@@ -21,7 +21,7 @@ def get_pokemon(name):
 
 def main():
     ny_pokemon = random.randint(1, 1025)
-    ny_pokemon = pokemon_get(ny_pokemon)
+    ny_pokemon = get_pokemon(ny_pokemon)
     gammel_pokemon = ""
 
     print(f"Navn: {ny_pokemon['name'].title()}")
