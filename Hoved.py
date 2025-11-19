@@ -17,16 +17,27 @@ def get_pokemon(name):
         print("Noe gikk galt")
         input("Trykk noe for å fortsette...")
 
-
+def linje():
+    print("-------------------------------------")
 
 def main():
     ny_pokemon = random.randint(1, 1025)
     ny_pokemon = get_pokemon(ny_pokemon)
-#    gammel_pokemon = ""
+    gammel_pokemon = ny_pokemon
 
-    print(f"Navn: {ny_pokemon['name'].title()}")
-    print(f"Vekt: {ny_pokemon['weight']/10}kg")
-#    print(f"Vekt: {gammel_pokemon['weight']/10}kg")
+    print(f"Navn: {gammel_pokemon['name'].title()}")
+    print(f"Vekt: {gammel_pokemon['weight']/10}kg")
 
+    while True:
+        ny_pokemon = random.randint(1, 1025)
+        ny_pokemon = get_pokemon(ny_pokemon)
+
+        
+        linje()
+        print(f"Veier {gammel_pokemon['name'].title()} mer en {ny_pokemon['name'].title()}?")
+        print(f"Navn: {ny_pokemon['name'].title()}")
+
+        player_input = input("Y or N")
+        gammel_pokemon = ny_pokemon
 
 main()
