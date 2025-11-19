@@ -1,5 +1,7 @@
 import requests
-import random 
+import random
+import os  
+
 
 # Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
@@ -34,10 +36,15 @@ def main():
 
         
         linje()
+        # Prints the new pokemon and ask about the old one
         print(f"Veier {gammel_pokemon['name'].title()} mer en {ny_pokemon['name'].title()}?")
         print(f"Navn: {ny_pokemon['name'].title()}")
 
-        player_input = input("Y or N")
+        linje()
+        player_input = input("Y or N: ")
+
+        # clears the terminal
+        os.system("cls")
         gammel_pokemon = ny_pokemon
 
 main()
