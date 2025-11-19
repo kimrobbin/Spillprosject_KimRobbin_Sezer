@@ -3,7 +3,7 @@ import requests
 # Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
 
-def pokemon_get(name):
+def get_pokemon(name):
     
     # Gets info about the pokemon 
     url= f"{web}pokemon/{name}"
