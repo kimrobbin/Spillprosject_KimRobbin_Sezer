@@ -40,16 +40,18 @@ def main():
 
         
         linje()
+        
         ny_pokemon_class = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
         print(f"Veier {gammel_pokemon.name} ( {gammel_pokemon.weight} kg) mer en {ny_pokemon_class.name}? ")
-
         print(f"Navn: {ny_pokemon_class.name}")
+
 
         linje()
         player_input = input("Y or N: ")
         if player_input == "y".lower():
             if gammel_pokemon.weight < ny_pokemon_class.weight:
                 print("Det var riktig ")
+                print(f"Den veier {ny_pokemon_class.weight}")
                 input("Trykk en knapp... ")
             else:
                 print("Det var feil ")
@@ -60,6 +62,7 @@ def main():
         if player_input == "n".lower():
             if gammel_pokemon.weight > ny_pokemon_class.weight:
                 print("Det var riktig ")
+                print(f"Den veier {ny_pokemon_class.weight}")
                 input("Trykk en knapp... ")
             else:
                 print("Det var feil ")
