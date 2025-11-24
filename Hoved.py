@@ -3,8 +3,11 @@ import random
 import os 
 from pokemon import Pokemon
 
-
-
+class Pokemon_Other_info(Pokemon):
+    def __init__(self, name, weight, height):
+        super().__init__(name, weight)
+        self.height = height 
+        
 # Makes a link to the api
 web = "https://pokeapi.co/api/v2/"
 
