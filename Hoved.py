@@ -27,21 +27,21 @@ def linje():
     print("-------------------------------------")
 
 def main():
-    ny_pokemon = random.randint(1, 1025)
-    ny_pokemon = get_pokemon(ny_pokemon)
-    gammel_pokemon = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
+    ny_pokemon_get = random.randint(1, 1025)
+    ny_pokemon_get = get_pokemon(ny_pokemon_get)
+    gammel_pokemon = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
 
     print(f"Navn: {gammel_pokemon.name}")
     print(f"Vekt: {gammel_pokemon.weight}kg")
 
     while True:
-        ny_pokemon = random.randint(1, 1025)
-        ny_pokemon = get_pokemon(ny_pokemon)
+        ny_pokemon_get = random.randint(1, 1025)
+        ny_pokemon_get = get_pokemon(ny_pokemon_get)
 
         
         linje()
         
-        ny_pokemon_class = Pokemon(ny_pokemon['name'].title(), ny_pokemon['weight'] / 10)
+        ny_pokemon_class = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
         print(f"Veier {gammel_pokemon.name} ( {gammel_pokemon.weight} kg) mer en {ny_pokemon_class.name}? ")
         print(f"Navn: {ny_pokemon_class.name}")
 
