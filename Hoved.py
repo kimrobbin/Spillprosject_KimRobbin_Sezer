@@ -49,11 +49,11 @@ def main():
         print(f"Navn: {ny_pokemon.name}")
         print(f"Score: {score}")
 
-
+        # Game Logic
         linje()
         while True:
             player_input = input("Y or N: ").lower()
-
+            # Yes Logic
             if player_input == "y":
                 # If gammel pokemon weights more then ny pokemon you get point 
                 if gammel_pokemon.weight > ny_pokemon.weight:
@@ -68,7 +68,7 @@ def main():
                     input("Trykk en knapp å avslutte... ")
                     quit()
                 break
-
+            # No Logic
             elif player_input == "n":
                 if gammel_pokemon.weight <= ny_pokemon.weight:
                     print("Det var riktig ")
@@ -85,7 +85,7 @@ def main():
             else:
                 print("skriv inn Y eller N")
 
-        # clears the terminal
+        # Clears the terminal
         os.system("cls")
         gammel_pokemon = ny_pokemon
 
