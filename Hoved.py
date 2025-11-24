@@ -49,7 +49,7 @@ def main():
         linje()
         player_input = input("Y or N: ")
         if player_input == "y".lower():
-            if gammel_pokemon.weight < ny_pokemon_class.weight:
+            if gammel_pokemon.weight > ny_pokemon_class.weight:
                 print("Det var riktig ")
                 print(f"Den veier {ny_pokemon_class.weight}")
                 input("Trykk en knapp... ")
@@ -60,7 +60,7 @@ def main():
                 quit()
 
         if player_input == "n".lower():
-            if gammel_pokemon.weight > ny_pokemon_class.weight:
+            if gammel_pokemon.weight <= ny_pokemon_class.weight:
                 print("Det var riktig ")
                 print(f"Den veier {ny_pokemon_class.weight}")
                 input("Trykk en knapp... ")
