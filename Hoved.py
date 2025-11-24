@@ -50,33 +50,37 @@ def main():
 
 
         linje()
-        player_input = input("Y or N: ")
-        if player_input == "y".lower():
-            if gammel_pokemon.weight > ny_pokemon_class.weight:
-                print("Det var riktig ")
-                print(f"Den veier {ny_pokemon_class.weight}")
-                score += 1
-                input("Trykk en knapp... ")
-            else:
-                print("Det var feil ")
-                print(f"Den veier {ny_pokemon_class.weight}")
-                print(f"Scoren din ble: {score}")
-                input("Trykk en knapp å avslutte... ")
-                quit()
+        while True:
+            player_input = input("Y or N: ").lower()
+            if player_input == "y":
+                if gammel_pokemon.weight > ny_pokemon_class.weight:
+                    print("Det var riktig ")
+                    print(f"Den veier {ny_pokemon_class.weight}")
+                    score += 1
+                    input("Trykk en knapp... ")
+                else:
+                    print("Det var feil ")
+                    print(f"Den veier {ny_pokemon_class.weight}")
+                    print(f"Scoren din ble: {score}")
+                    input("Trykk en knapp å avslutte... ")
+                    quit()
+                break
 
-        if player_input == "n".lower():
-            if gammel_pokemon.weight <= ny_pokemon_class.weight:
-                print("Det var riktig ")
-                print(f"Den veier {ny_pokemon_class.weight}")
-                score += 1
-                input("Trykk en knapp... ")
+            elif player_input == "n":
+                if gammel_pokemon.weight <= ny_pokemon_class.weight:
+                    print("Det var riktig ")
+                    print(f"Den veier {ny_pokemon_class.weight}")
+                    score += 1
+                    input("Trykk en knapp... ")
+                else:
+                    print("Det var feil ")
+                    print(f"Den veier {ny_pokemon_class.weight}")
+                    print(f"Scoren din ble: {score}")
+                    input("Trykk en knapp for å avslutte... ")
+                    quit()
+                break
             else:
-                print("Det var feil ")
-                print(f"Den veier {ny_pokemon_class.weight}")
-                print(f"Scoren din ble: {score}")
-                input("Trykk en knapp for å avslutte... ")
-                quit()
-     
+                print("skriv inn Y eller N")
         # clears the terminal
         os.system("cls")
         gammel_pokemon = ny_pokemon_class
