@@ -30,6 +30,8 @@ def main():
     ny_pokemon_get = random.randint(1, 1025)
     ny_pokemon_get = get_pokemon(ny_pokemon_get)
     gammel_pokemon = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
+    score = 0
+
 
     print(f"Navn: {gammel_pokemon.name}")
     print(f"Vekt: {gammel_pokemon.weight}kg")
@@ -44,6 +46,7 @@ def main():
         ny_pokemon_class = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
         print(f"Veier {gammel_pokemon.name} ( {gammel_pokemon.weight} kg) mer en {ny_pokemon_class.name}? ")
         print(f"Navn: {ny_pokemon_class.name}")
+        print(f"Score: {score}")
 
 
         linje()
@@ -52,10 +55,12 @@ def main():
             if gammel_pokemon.weight > ny_pokemon_class.weight:
                 print("Det var riktig ")
                 print(f"Den veier {ny_pokemon_class.weight}")
+                score += 1
                 input("Trykk en knapp... ")
             else:
                 print("Det var feil ")
                 print(f"Den veier {ny_pokemon_class.weight}")
+                print(f"Scoren din ble: {score}")
                 input("Trykk en knapp å avslutte... ")
                 quit()
 
@@ -63,10 +68,12 @@ def main():
             if gammel_pokemon.weight <= ny_pokemon_class.weight:
                 print("Det var riktig ")
                 print(f"Den veier {ny_pokemon_class.weight}")
+                score += 1
                 input("Trykk en knapp... ")
             else:
                 print("Det var feil ")
                 print(f"Den veier {ny_pokemon_class.weight}")
+                print(f"Scoren din ble: {score}")
                 input("Trykk en knapp for å avslutte... ")
                 quit()
      
