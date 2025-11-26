@@ -113,4 +113,5 @@ def main():
         os.system("cls")
         gammel_pokemon = ny_pokemon
 
-main()
+if __name__ == "__main__":
+    main()
