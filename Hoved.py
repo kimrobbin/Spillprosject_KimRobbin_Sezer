@@ -3,7 +3,7 @@ import random
 import os 
 from pokemon import Pokemon
 
-class Pokemon_Other_info(Pokemon):
+class Pokemon_info(Pokemon):
     def __init__(self, name, weight, height):
         super().__init__(name, weight)
         self.height = height 
@@ -32,13 +32,15 @@ def main():
     ny_pokemon_get = get_pokemon(ny_pokemon_get)
 
     # Makes a object for gammel pokemon
-    gammel_pokemon = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
+    gammel_pokemon = Pokemon_info(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10, ny_pokemon_get["height"] * 10)
 
     score = 0
 
 
     print(f"Navn: {gammel_pokemon.name}")
     print(f"Vekt: {gammel_pokemon.weight}kg")
+    print(f"Høyde: {gammel_pokemon.height} cm")
+
 
     while True:
         ny_pokemon_get = random.randint(1, 1025)
@@ -47,8 +49,9 @@ def main():
         
         linje()
          # Makes a object for ny pokemon
-        ny_pokemon = Pokemon(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10)
-        print(f"Veier {gammel_pokemon.name} ( {gammel_pokemon.weight} kg) mer en {ny_pokemon.name}? ")
+        ny_pokemon = Pokemon_info(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10, ny_pokemon_get["height"] * 10 )
+
+        print(f"Veier {gammel_pokemon.name} ( {gammel_pokemon.weight} kg) ({gammel_pokemon.height} cm) mer en {ny_pokemon.name}? ")
         print(f"Navn: {ny_pokemon.name}")
         print(f"Score: {score}")
 
