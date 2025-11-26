@@ -2,6 +2,13 @@ import requests
 import random
 import os 
 from pokemon import Pokemon
+from rich import print
+from rich.panel import Panel
+
+print(Panel.fit(
+    "[bold yellow]Pikachu[/bold yellow]\nWeight: 6.0 kg",
+    title="Pokemon"
+))
 
 class Pokemon_info(Pokemon):
     def __init__(self, name, weight, height):
@@ -96,3 +103,4 @@ def main():
         gammel_pokemon = ny_pokemon
 
 main()
+
