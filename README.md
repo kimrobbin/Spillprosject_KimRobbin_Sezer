@@ -47,6 +47,5 @@ Vi har valgt **smidig utvikling** fordi:
 	```
 
 ## Forbedringer
-- Bedre feilhåndtering
-- Ha flere gamemodes. Feks høyde, type og generasjon 
-
+- Ha flere gamemodes. Feks høyde, type og generasjon
+- Ha ende flere komentarer
