@@ -33,7 +33,7 @@ Vi har valgt **smidig utvikling** fordi:
 
 ## Samarbeid og GitHub
 - Repository opprettet av kim robbin og inviterte sezer
-- Alle bidra med commits
+- Alle bidro med commits
 - Brukte branches litt 
 
 ## Kjøring av spillet
@@ -47,5 +47,5 @@ Vi har valgt **smidig utvikling** fordi:
 	```
 
 ## Forbedringer
-- Ha flere gamemodes. Feks høyde, type og generasjon
-- Ha ende flere komentarer
+- Ha flere gamemodes. F.eks. høyde, type og generasjon
+- Ha flere komentarer i koden
