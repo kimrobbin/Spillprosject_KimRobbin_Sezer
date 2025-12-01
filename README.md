@@ -1,5 +1,5 @@
 
-# Pokémon Vekt- og Høyde-Gjettespill
+# Pokémon Vekt gjettespill
 
 ## Om prosjektet
 Dette er et konsollspill hvor du skal gjette om en Pokémon veier mer enn en annen. Spillet henter data fra PokeAPI og gir deg poeng for riktige svar. Målet er å få høyest score som mulig.

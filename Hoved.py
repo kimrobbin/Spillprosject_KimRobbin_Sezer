@@ -32,6 +32,7 @@ def linje():
     print("[dim cyan]-------------------------------------[/dim cyan]")
 
 def main():
+    os.system("cls")
     ny_pokemon_get = random.randint(1, 1025)
     ny_pokemon_get = get_pokemon(ny_pokemon_get)
 
@@ -40,7 +41,7 @@ def main():
 
     score = 0
 
-    # Show first pokemon with a simple panel
+    # prints first pokemon 
     console.print(Panel(
         f"[bold yellow]{gammel_pokemon.name}[/bold yellow]\n"
         f"[cyan]Vekt:[/cyan] {gammel_pokemon.weight} kg\n"
@@ -58,7 +59,7 @@ def main():
         # Makes a object for ny pokemon
         ny_pokemon = Pokemon_info(ny_pokemon_get['name'].title(), ny_pokemon_get['weight'] / 10, ny_pokemon_get["height"] * 10 )
 
-        # Ask the question (no weight revealed on new Pokémon)
+        # asks the question higher or lower 
         print(f"[white]Veier[/white] [yellow]{gammel_pokemon.name} ({gammel_pokemon.weight} kg)[/yellow] "
               f"[white]mer enn[/white] [yellow]{ny_pokemon.name}[/yellow]?")
 
@@ -89,6 +90,7 @@ def main():
                     print(f"[cyan]Den veier:[/cyan] {ny_pokemon.weight}")
                     print(f"[yellow]Scoren din ble:[/yellow] {score}")
                     input("Trykk en knapp å avslutte... ")
+                    main()
                     quit()
                 break
 
@@ -104,6 +106,7 @@ def main():
                     print(f"[cyan]Den veier:[/cyan] {ny_pokemon.weight}")
                     print(f"[yellow]Scoren din ble:[/yellow] {score}")
                     input("Trykk en knapp for å avslutte... ")
+                    main()
                     quit()
                 break
             else:
